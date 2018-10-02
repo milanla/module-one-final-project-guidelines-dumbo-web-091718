@@ -6,6 +6,7 @@ class CreateQuestions < ActiveRecord::Migration[5.0]
       t.string :choice_b
       t.string :choice_c
       t.string :answer
+      t.integer :artist_id
     end
   end
 end
