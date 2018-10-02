@@ -101,92 +101,92 @@ travis = Artist.create(
 # Taylor Swift Q's
 tayq1 = Question.create(
   content: "What is Taylor Swift's birth year?",
-  choice_a: "1998",
-  choice_b: "1988",
-  choice_c: "1989",
-  answer: "1989",
+  choice_a: "a)1998",
+  choice_b: "b)1988",
+  choice_c: "c)1989",
+  answer: "c",
   artist_id: 1
 )
 
 tayq2 = Question.create(
   content: "What is Taylor Swift's top hit single?",
-  choice_a: "You Belong With Me",
-  choice_b: "Shake It Off",
-  choice_c: "Bad Blood",
-  answer: "Shake It Off",
+  choice_a: "a)You Belong With Me",
+  choice_b: "b)Shake It Off",
+  choice_c: "c)Bad Blood",
+  answer: "b",
   artist_id: 1
 )
 
 tayq3 = Question.create(
   content: "Who is Taylor Swift's current partner?",
-  choice_a: "Joe Alwin",
-  choice_b: "Calvin Harris",
-  choice_c: "Tom Hiddleston",
-  answer: "Joe Alwin",
+  choice_a: "a)Joe Alwin",
+  choice_b: "b)Calvin Harris",
+  choice_c: "c)Tom Hiddleston",
+  answer: "a",
   artist_id: 1
 )
 
 tayq4 = Question.create(
   content: "What is Taylor Swift's Biggest Album?",
-  choice_a: "Fearless",
-  choice_b: "Reputation",
-  choice_c: "1989",
-  answer: "Fearless",
+  choice_a: "a)Fearless",
+  choice_b: "b)Reputation",
+  choice_c: "c)1989",
+  answer: "a",
   artist_id: 1
 )
 
 tayq5 = Question.create(
   content: "Where was Taylor Swift born?",
-  choice_a: "Reading, PA",
-  choice_b: "New York, NY",
-  choice_c: "Nashville, TN",
-  answer: "Reading, PA",
+  choice_a: "a)Reading, PA",
+  choice_b: "b)New York, NY",
+  choice_c: "c)Nashville, TN",
+  answer: "a",
   artist_id: 1
 )
 
 # Travis Scott Q's
 travq1 = Question.create(
   content: "Where was Travis Scott born?",
-  choice_a: "Los Angeles, CA",
-  choice_b: "Houston, TX",
-  choice_c: "Canton, OH",
-  answer: "Houston, TX",
+  choice_a: "a)Los Angeles, CA",
+  choice_b: "b)Houston, TX",
+  choice_c: "c)Canton, OH",
+  answer: "b",
   artist_id: 2
 )
 
 travq2 = Question.create(
   content: "What is Travis Scott's famous alias?",
-  choice_a: "La Flame",
-  choice_b: "Cactus Jack",
-  choice_c: "Huncho",
-  answer: "La Flame",
+  choice_a: "a)La Flame",
+  choice_b: "b)Cactus Jack",
+  choice_c: "c)Huncho",
+  answer: "a",
   artist_id: 2
 )
 
 travq3 = Question.create(
   content: "Who is Travis Scott's current partner?",
-  choice_a: "Rihaanna",
-  choice_b: "Kylie Jenner",
-  choice_c: "Blac Chyna",
-  answer: "Kylie Jenner",
+  choice_a: "a)Rihanna",
+  choice_b: "b)Kylie Jenner",
+  choice_c: "c)Blac Chyna",
+  answer: "b",
   artist_id: 2
 )
 
 travq4 = Question.create(
   content: "How Tall is Travis Scott?",
-  choice_a: "6'2",
-  choice_b: "5'9",
-  choice_c: "5'10",
-  answer: "5'10",
+  choice_a: "a)6'2",
+  choice_b: "b)5'9",
+  choice_c: "c)5'10",
+  answer: "c",
   artist_id: 2
 )
 
 travq5 = Question.create(
   content: "What is Travis Scott's famous catch phrase?",
-  choice_a: "Straight Up",
-  choice_b: "It's Litt",
-  choice_c: "Yugh",
-  answer: "It's Lit",
+  choice_a: "a)Straight Up",
+  choice_b: "b)It's Litt",
+  choice_c: "c)Yugh",
+  answer: "b",
   artist_id: 2
 )
 

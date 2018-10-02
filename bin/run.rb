@@ -1,6 +1,6 @@
 require_relative '../config/environment'
 
-
+require 'pry'
 
 puts "Welcome to SuperFan the Trivia Game!"
 
@@ -37,8 +37,37 @@ name = find_artist(artist_number)
 puts "Hey #{username}! Let's see what you know about this #{name}!!!"
 
 new_game = Game.create(player_id: 1, artist_id: 1)
-def find_questions
-Question.all.select do
+puts "Game Initializing......"
 
+def questions(artist_number, new_player)
+  questions_array = Question.all.select do |q|
+    q.artist_id == artist_number.to_i
+      # puts "#{q[:content]}"
+    # end
+  end
+  questions_array.each do |q|
+    puts q.content
+    puts q.choice_a
+    puts q.choice_b
+    puts q.choice_c
+    ui = gets.chomp
+    if ui == q.answer
+      new_player.points += 1
+      puts "=================================================="
+      puts "Right Answer"
+      puts "=================================================="
+    elsif
+      puts "=================================================="
+      puts "Wrong answer(ex. a, b, c)"
+      puts "=================================================="
+    end
+  end
 end
-puts "Lets Gooo!!!...."
+
+questions(artist_number, new_player)[1]
+
+puts "#{new_player.points}"
+
+def run
+  
+end
