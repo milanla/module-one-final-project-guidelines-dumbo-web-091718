@@ -20,7 +20,7 @@ def welcome
     2. Choose an artist you feel you know the best.
     3. Answer a series of questions about that artist
  as quickly as possible while only typing “a , b or c “
- to correspond to the multiple choice answers provided."
+ to correspond to the multiple choice answers provided.".colorize(:red)
   puts "         ===================================="
   prompt = TTY::Prompt.new
   username = prompt.ask('Input your username:') do |q|
@@ -64,34 +64,46 @@ end
 
 def print_questions_and_choices(artist_name, new_player,questions_array)
   questions_array.each do |q|
-    puts q.content
-    puts q.choice_a
-    puts q.choice_b
-    puts q.choice_c
-
-    ui = gets.chomp
-
-    # sleep will pause for 10 or 15 seconds
-    if ui == q.answer
-      new_player.points += 1
-      puts `clear`
-      puts "            ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ"
-      puts "=================================================="
-      puts "       Correct! You're pretty awesome!!!"
-      puts "=================================================="
-    elsif ui != "a" && ui != "b" && ui != "c"
-      puts `clear`
-      puts "                ʕノ•ᴥ•ʔノ ︵ ┻━┻"
-      puts "=================================================="
-      puts "     Invalid input. Please type a, b or c."
-      puts "=================================================="
-
-    redo else
-      puts `clear`
-      puts "                    ┌П┐(ಠ_ಠ)"
-      puts "=================================================="
-      puts "               Wrong! Try harder!"
-      puts "=================================================="
+    puts q.content.colorize(:light_yellow)
+    puts q.choice_a.colorize(:light_blue)
+    puts q.choice_b.colorize(:light_blue)
+    puts q.choice_c.colorize(:light_blue)
+    begin
+      Timeout::timeout 5 do
+        ui = gets.chomp
+        if ui == q.answer
+          new_player.points += 1
+          puts `clear`
+          puts "            ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ".colorize(:light_yellow)
+          puts "=================================================="
+          puts "       Correct! You're pretty awesome!!!".colorize(:light_green)
+          puts "=================================================="
+        elsif ui != "a" && ui != "b" && ui != "c"
+          puts `clear`
+          puts "                ʕノ•ᴥ•ʔノ ︵ ┻━┻".colorize(:light_yellow)
+          puts "=================================================="
+          puts "     Invalid input. Please type a, b or c.".colorize(:red)
+          puts "=================================================="
+        redo else
+          puts `clear`
+          puts "                    ( ╥﹏╥) ノシ".colorize(:light_yellow)
+          puts "=================================================="
+          puts "               Wrong! Try harder!".colorize(:red)
+          puts "=================================================="
+        end
+        sleep(2)
+        system "clear"
+      end
+    rescue Timeout::Error
+        ui = nil
+        system "clear"
+        puts "                    ( ╥﹏╥) ノシ".colorize(:light_yellow)
+        puts "==================================================="
+        puts "                    Time Out!".colorize(:red)
+        puts "==================================================="
+        sleep(2)
+        system "clear"
+        next
     end
     sleep(2)
     system "clear"
@@ -104,6 +116,15 @@ def goodbye(new_player)
   system "clear"
   new_player.update(points: new_player.points)
   puts "            Congratulations! You have a total of #{new_player.points} points!!!"
+    if new_player.points >= 75
+      new_player.update(status: "SuperFan")
+      puts "                            You're a SuperFan!!!"
+    elsif new_player.points >= 50
+      new_player.update(status: "BigFan")
+      puts "                             You're a BigFan!"
+    else
+      puts "                              You're a fan!"
+    end
   puts "    +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-++-+ +-+ +-+ +-+ +-+ +-+ +-+ +-++-+ +-+"
   puts "                    Thank you for playing SuperFan"
   sleep(3)
@@ -112,16 +133,16 @@ def goodbye(new_player)
   puts "          |S| |u| |p| |e| |r| |F| |a| |n|"
   puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+"
   sleep(3)
-  start_over
+  start_over(new_player)
 end
 
-def start_over
+def start_over(new_player)
   prompt = TTY::Prompt.new
   restart = prompt.select('Would like to play again?', %w(Yes No))
 # binding.pry
   case restart
   when "Yes"
-    welcome
+    pick_artist(new_player)
   when "No"
     system "clear"
     puts "          Thank you for playing SuperFan!"
