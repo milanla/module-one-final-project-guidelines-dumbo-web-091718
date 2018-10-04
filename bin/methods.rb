@@ -2,9 +2,18 @@
 def welcome
   puts "Welcome to SuperFan the Trivia Game!"
   puts "===================================="
-  puts "Input your username: "
-
-  username = gets.chomp
+  puts "Rules"
+  puts "===================================="
+  puts "1. Enter your username
+2. Choose an artist you feel you know the best.
+3. Answer a series of questions about that artist
+as quickly as possible while only typing “a , b or c “
+to correspond to the multiple choice answers provided."
+  puts "===================================="
+  prompt = TTY::Prompt.new
+  username = prompt.ask('Input your username:') do |q|
+    q.validate /[a-z]/
+  end
   new_player = Player.find_or_create_by(name: username)
   pick_artist(new_player)
 end
@@ -21,6 +30,7 @@ def show_points(artist_name, artist_number, new_player)
   system "clear"
   puts "Hey #{new_player.name}! You have #{new_player.points} point(s). Let's see what you know about this #{artist_name}!!!"
   game_initialize(artist_name, artist_number, new_player)
+
 end
 
 def game_initialize(artist_name, artist_number, new_player)
@@ -30,6 +40,7 @@ def game_initialize(artist_name, artist_number, new_player)
 end
 
 def questions(artist_name, artist_number, new_player)
+  system "clear" # this line
   questions_array = Question.all.select do |q|
     q.artist_id == artist_number.to_i
   end
@@ -59,17 +70,21 @@ def print_questions_and_choices(artist_name, new_player,questions_array)
       puts "=================================================="
 
     redo else
-    puts `clear`
+      puts `clear`
       puts "=================================================="
       puts "Boo! Try harder next time!"
       puts "=================================================="
     end
+    sleep(2)
+    system "clear"
   end
   goodbye(new_player)
 end
 
 def goodbye(new_player)
   puts "Congratulations you have earned #{new_player.points} points!!!"
+  new_player.update(points: new_player.points)
+  puts "You have a total of #{new_player.points} points!!!"
 end
 
 def list_artists
