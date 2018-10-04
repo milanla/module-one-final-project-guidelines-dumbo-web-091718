@@ -165,7 +165,7 @@ usher = Artist.create(
 #   genre: "",
 #   birth_place: "",
 #   birth_year:
-#   birth_name: "",
+  birth_name: "",
 #   hit_single: "",
 #   awards: "",
 #   biggest_album: "",

@@ -1,7 +1,11 @@
 puts "Welcome to SuperFan the Trivia Game!"
-
 puts "===================================="
-
+puts "Rules"
+puts "===================================="
+puts "1. Enter your username
+2. Choose an artist you feel you know the best.
+3. Answer a series of questions about that artist as quickly as possible while only typing “a , b or c “ to correspond to the multiple choice answers provided."
+puts "===================================="
 puts "Input your username: "
 
 username = gets.chomp
