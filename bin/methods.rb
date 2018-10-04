@@ -20,7 +20,8 @@ def welcome
     2. Choose an artist you feel you know the best.
     3. Answer a series of questions about that artist
  as quickly as possible while only typing “a , b or c “
- to correspond to the multiple choice answers provided.".colorize(:red)
+ to correspond to the multiple choice answers provided.
+ (You only have 10 seconds to answer!)".colorize(:red)
   puts "         ===================================="
   prompt = TTY::Prompt.new
   username = prompt.ask('Input your username:') do |q|
@@ -69,7 +70,7 @@ def print_questions_and_choices(artist_name, new_player,questions_array)
     puts q.choice_b.colorize(:light_blue)
     puts q.choice_c.colorize(:light_blue)
     begin
-      Timeout::timeout 5 do
+      Timeout::timeout 10 do
         ui = gets.chomp
         if ui == q.answer
           new_player.points += 1
@@ -91,7 +92,7 @@ def print_questions_and_choices(artist_name, new_player,questions_array)
           puts "               Wrong! Try harder!".colorize(:red)
           puts "=================================================="
         end
-        sleep(2)
+        sleep(1)
         system "clear"
       end
     rescue Timeout::Error
@@ -101,11 +102,11 @@ def print_questions_and_choices(artist_name, new_player,questions_array)
         puts "==================================================="
         puts "                    Time Out!".colorize(:red)
         puts "==================================================="
-        sleep(2)
+        sleep(1)
         system "clear"
         next
     end
-    sleep(2)
+    sleep(1)
     system "clear"
   end
   goodbye(new_player)

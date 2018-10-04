@@ -160,69 +160,6 @@ usher = Artist.create(
   famous_alias: "Big Ush",
   height: "5'7"
 )
-# Artist.create(
-#   name: "",
-#   genre: "",
-#   birth_place: "",
-#   birth_year:
-  birth_name: "",
-#   hit_single: "",
-#   awards: "",
-#   biggest_album: "",
-#   current_partner: "",
-#   catch_phrase: "",
-#   first_child: "",
-#   famous_alias: "",
-#   height: ""
-# )
-
-# Artist.create(
-#   name: "",
-#   genre: "",
-#   birth_place: "",
-#   birth_year: ,
-#   birth_name: "",
-#   hit_single: "",
-#   awards: "",
-#   biggest_album: "",
-#   current_partner: "",
-#   catch_phrase: "",
-#   first_child: "",
-#   famous_alias: "",
-#   height: ""
-# )
-
-# Artist.create(
-#   name: "",
-#   genre: "",
-#   birth_place: "",
-#   birth_year: ,
-#   birth_name: "",
-#   hit_single: "",
-#   awards: "",
-#   biggest_album: "",
-#   current_partner: "",
-#   catch_phrase: "",
-#   first_child: "",
-#   famous_alias: "",
-#   height: ""
-# )
-
-# Artist.create(
-#   name: "",
-#   genre: "",
-#   birth_place: "",
-#   birth_year: ,
-#   birth_name: "",
-#   hit_single: "",
-#   awards: "",
-#   biggest_album: "",
-#   current_partner: "",
-#   catch_phrase: "",
-#   first_child: "",
-#   famous_alias: "",
-#   height: ""
-# )
 
 # Different Questions
 
