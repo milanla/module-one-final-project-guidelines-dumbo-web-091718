@@ -2,8 +2,4 @@ class Player < ActiveRecord::Base
   has_many :game
   has_many :artist, through: :game
 
-def plus_point
-
-end
-
 end
