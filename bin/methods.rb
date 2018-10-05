@@ -10,7 +10,7 @@ def welcome
                ▄ █ ▄ █ ▄ ▄ █ ▄ █ ▄ █
           Min - - - - - - - - - - - -● Max".colorize(:light_green)
 
-  puts "         Welcome to SuperFan the Trivia Game!"
+  puts "         Welcome to SuperFan the Trivia Game!".colorize(:light_blue)
   sleep(3)
   system "clear"
   puts "         ===================================="
@@ -44,7 +44,7 @@ end
 
 def show_points(artist_name, artist_number, new_player)
   system "clear"
-  puts "Hey #{new_player.name}! You have #{new_player.points} point(s). Let's see what you know about this #{artist_name}!!!"
+  puts "Hey #{new_player.name}! You have #{new_player.points} point(s). Let's see what you know about #{artist_name}!!!"
   game_initialize(artist_name, artist_number, new_player)
 
 end
@@ -65,52 +65,49 @@ end
 
 def print_questions_and_choices(artist_name, new_player,questions_array)
   questions_array.each do |q|
-    puts q.content.colorize(:light_yellow)
-    puts q.choice_a.colorize(:light_blue)
-    puts q.choice_b.colorize(:light_blue)
-    puts q.choice_c.colorize(:light_blue)
-    begin
-      Timeout::timeout 10 do
-        ui = gets.chomp
-        if ui == q.answer
-          new_player.points += 1
-          puts `clear`
-          puts "            ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ".colorize(:light_yellow)
-          puts "=================================================="
-          puts "       Correct! You're pretty awesome!!!".colorize(:light_green)
-          puts "=================================================="
-        elsif ui != "a" && ui != "b" && ui != "c"
-          puts `clear`
-          puts "                ʕノ•ᴥ•ʔノ ︵ ┻━┻".colorize(:light_yellow)
-          puts "=================================================="
-          puts "     Invalid input. Please type a, b or c.".colorize(:red)
-          puts "=================================================="
-        redo else
-          puts `clear`
-          puts "                    ( ╥﹏╥) ノシ".colorize(:light_yellow)
-          puts "=================================================="
-          puts "               Wrong! Try harder!".colorize(:red)
-          puts "=================================================="
-        end
-        sleep(1)
-        system "clear"
-      end
-    rescue Timeout::Error
-        ui = nil
-        system "clear"
-        puts "                    ( ╥﹏╥) ノシ".colorize(:light_yellow)
-        puts "==================================================="
-        puts "                    Time Out!".colorize(:red)
-        puts "==================================================="
-        sleep(1)
-        system "clear"
-        next
-    end
-    sleep(1)
-    system "clear"
+    prompt = TTY::Prompt.new
+      begin
+     Timeout::timeout 10 do
+       var = prompt.select(q.content, %W(#{q.choice_a} #{q.choice_b} #{q.choice_c}))
+       if var == q.answer
+         new_player.points += 1
+         puts `clear`
+         puts "            ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ".colorize(:light_yellow)
+         puts "=================================================="
+         puts "       Correct! You're pretty awesome!!!".colorize(:light_green)
+         puts "=================================================="
+       # elsif var != "a" && var != "b" && var != "c"
+       #   puts `clear`
+       #   puts "                ʕノ•ᴥ•ʔノ ︵ ┻━┻".colorize(:light_yellow)
+       #   puts "=================================================="
+       #   puts "     Invalid input. Please type a, b or c.".colorize(:red)
+       #   puts "=================================================="
+       else
+         puts `clear`
+         puts "                    ( ╥﹏╥) ノシ".colorize(:light_yellow)
+         puts "=================================================="
+         puts "               Wrong! Try harder!".colorize(:red)
+         puts "=================================================="
+       end
+       sleep(1)
+       system "clear"
+     end
+   rescue Timeout::Error
+       # var = ""
+       system "clear"
+       puts "                    ( ╥﹏╥) ノシ".colorize(:light_yellow)
+       puts "==================================================="
+       puts "                    Time Out!".colorize(:red)
+       puts "==================================================="
+       sleep(1)
+       system "clear"
+       next
+   end
+   sleep(1)
+   system "clear"
   end
   goodbye(new_player)
-end
+  end
 
 def goodbye(new_player)
   pid = fork{exec 'afplay', './music/Qwerky(Unfinished).m4a'}
@@ -127,12 +124,12 @@ def goodbye(new_player)
       puts "                              You're a fan!"
     end
   puts "    +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-++-+ +-+ +-+ +-+ +-+ +-+ +-+ +-++-+ +-+"
-  puts "                    Thank you for playing SuperFan"
+  puts "                    Thank you for playing SuperFan".colorize(:light_blue)
   sleep(3)
   system "clear"
-  puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+"
-  puts "          |S| |u| |p| |e| |r| |F| |a| |n|"
-  puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+"
+  puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+".colorize(:light_green)
+  puts "          |S| |u| |p| |e| |r| |F| |a| |n|".colorize(:light_green)
+  puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+".colorize(:light_green)
   sleep(3)
   start_over(new_player)
 end
@@ -146,11 +143,11 @@ def start_over(new_player)
     pick_artist(new_player)
   when "No"
     system "clear"
-    puts "          Thank you for playing SuperFan!"
+    puts "          Thank you for playing SuperFan!".colorize(:light_blue)
     puts "                                         "
-    puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+"
-    puts "          |S| |u| |p| |e| |r| |F| |a| |n|"
-    puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+"
+    puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+".colorize(:light_green)
+    puts "          |S| |u| |p| |e| |r| |F| |a| |n|".colorize(:light_green)
+    puts "          +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+".colorize(:light_green)
     sleep(2)
   end
 end

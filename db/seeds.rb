@@ -166,230 +166,230 @@ usher = Artist.create(
 # Taylor Swift Q's
 tayq1 = Question.create(
   content: "What is Taylor Swift's birth year?",
-  choice_a: "a)1998",
-  choice_b: "b)1988",
-  choice_c: "c)1989",
-  answer: "c",
+  choice_a: "1998",
+  choice_b: "1988",
+  choice_c: "1989",
+  answer: "1989",
   artist_id: 2
 )
 
 tayq2 = Question.create(
   content: "What is Taylor Swift's top hit single?",
-  choice_a: "a)You Belong With Me",
-  choice_b: "b)Shake It Off",
-  choice_c: "c)Bad Blood",
-  answer: "b",
+  choice_a: "You Belong With Me",
+  choice_b: "Shake It Off",
+  choice_c: "Bad Blood",
+  answer: "Shake It Off",
   artist_id: 2
 )
 
 tayq3 = Question.create(
   content: "Who is Taylor Swift's current partner?",
-  choice_a: "a)Joe Alwin",
-  choice_b: "b)Calvin Harris",
-  choice_c: "c)Tom Hiddleston",
-  answer: "a",
+  choice_a: "Joe Alwin",
+  choice_b: "Calvin Harris",
+  choice_c: "Tom Hiddleston",
+  answer: "Joe Alwin",
   artist_id: 2
 )
 
 tayq4 = Question.create(
   content: "What is Taylor Swift's Biggest Album?",
-  choice_a: "a)Fearless",
-  choice_b: "b)Reputation",
-  choice_c: "c)1989",
-  answer: "a",
+  choice_a: "Fearless",
+  choice_b: "Reputation",
+  choice_c: "1989",
+  answer: "Fearless",
   artist_id: 2
 )
 
 tayq5 = Question.create(
   content: "Where was Taylor Swift born?",
-  choice_a: "a)Reading, PA",
-  choice_b: "b)New York, NY",
-  choice_c: "c)Nashville, TN",
-  answer: "a",
+  choice_a: "Reading, PA",
+  choice_b: "New York, NY",
+  choice_c: "Nashville, TN",
+  answer: "Reading, PA",
   artist_id: 2
 )
 
 # Travis Scott Q's
 travq1 = Question.create(
   content: "Where was Travis Scott born?",
-  choice_a: "a)Los Angeles, CA",
-  choice_b: "b)Houston, TX",
-  choice_c: "c)Canton, OH",
-  answer: "b",
+  choice_a: "Los Angeles, CA",
+  choice_b: "Houston, TX",
+  choice_c: "Canton, OH",
+  answer: "Houston, TX",
   artist_id: 4
 )
 
 travq2 = Question.create(
   content: "What is Travis Scott's famous alias?",
-  choice_a: "a)La Flame",
-  choice_b: "b)Cactus Jack",
-  choice_c: "c)Huncho",
-  answer: "a",
+  choice_a: "La Flame",
+  choice_b: "Cactus Jack",
+  choice_c: "Huncho",
+  answer: "La Flame",
   artist_id: 4
 )
 
 travq3 = Question.create(
   content: "Who is Travis Scott's current partner?",
-  choice_a: "a)Rihanna",
-  choice_b: "b)Kylie Jenner",
-  choice_c: "c)Blac Chyna",
-  answer: "b",
+  choice_a: "Rihanna",
+  choice_b: "Kylie Jenner",
+  choice_c: "Blac Chyna",
+  answer: "Kylie Jenner",
   artist_id: 4
 )
 
 travq4 = Question.create(
   content: "How Tall is Travis Scott?",
-  choice_a: "a)6'2",
-  choice_b: "b)5'9",
-  choice_c: "c)5'10",
-  answer: "c",
+  choice_a: "6'2",
+  choice_b: "5'9",
+  choice_c: "5'10",
+  answer: "5'10",
   artist_id: 4
 )
 
 travq5 = Question.create(
   content: "What is Travis Scott's famous catch phrase?",
-  choice_a: "a)Lets Get It",
-  choice_b: "b)It's Litt",
-  choice_c: "c)Yugh",
-  answer: "b",
+  choice_a: "Lets Get It",
+  choice_b: "It's Litt",
+  choice_c: "Yugh",
+  answer: "It's Litt",
   artist_id: 4
 )
 
 # Kendrick Lamar
 ken1 = Question.create(
   content: "Where was Kendrick Lamar born?",
-  choice_a: "a)Compton, CA",
-  choice_b: "b)Denver, CO",
-  choice_c: "c)Chicago, IL",
-  answer: "a",
+  choice_a: "Compton, CA",
+  choice_b: "Denver, CO",
+  choice_c: "Chicago, IL",
+  answer: "Compton, CA",
   artist_id: 6
 )
 
 ken2 = Question.create(
   content: "What year was Kendrick Lamar born?",
-  choice_a: "a)1982",
-  choice_b: "b)1979",
-  choice_c: "c)1987",
-  answer: "c",
+  choice_a: "1982",
+  choice_b: "1979",
+  choice_c: "1987",
+  answer: "1987",
   artist_id: 6
 )
 
 ken3 = Question.create(
   content: "Who is Kendrick Lamar's current girlfriend?",
-  choice_a: "a)Whitney Alford",
-  choice_b: "b)Kayla Duckworth",
-  choice_c: "c)Paula Oliver",
-  answer: "a",
+  choice_a: "Whitney Alford",
+  choice_b: "Kayla Duckworth",
+  choice_c: "Paula Oliver",
+  answer: "Whitney Alford",
   artist_id: 6
 )
 
 ken4 = Question.create(
   content: "What is Kendrick Lamar's biggest album?",
-  choice_a: "a)good kid, m.A.A.d city",
-  choice_b: "b)untitled unmastered",
-  choice_c: "c)DAMN",
-  answer: "c",
+  choice_a: "good kid, m.A.A.d city",
+  choice_b: "untitled unmastered",
+  choice_c: "DAMN",
+  answer: "DAMN",
   artist_id: 6
 )
 
 ken5 = Question.create(
   content: "What is Kendrick Lamar's famous alias?",
-  choice_a: "a)K-Rabbit",
-  choice_b: "b)Kendrick",
-  choice_c: "c)K-Dot",
-  answer: "c",
+  choice_a: "K-Rabbit",
+  choice_b: "Kendrick",
+  choice_c: "K-Dot",
+  answer: "K-Dot",
   artist_id: 6
 )
 
 # Drake Questions
 drake1 = Question.create(
   content: "How many Grammy's have Drake recieved?",
-  choice_a: "a)1 Grammy",
-  choice_b: "b)2 Grammy's",
-  choice_c: "c)3 Grammy's",
-  answer: "c",
+  choice_a: "1 Grammy",
+  choice_b: "2 Grammy's",
+  choice_c: "3 Grammy's",
+  answer: "3 Grammy's",
   artist_id: 7
 )
 
 drake2 = Question.create(
   content: "What is Drake's top hit single?",
-  choice_a: "a)God's Plan",
-  choice_b: "b)Nice For What",
-  choice_c: "c)One Dance",
-  answer: "c",
+  choice_a: "God's Plan",
+  choice_b: "Nice For What",
+  choice_c: "One Dance",
+  answer: "One Dance",
   artist_id: 7
 )
 
 drake3 = Question.create(
   content: "What year was Drake born?",
-  choice_a: "a)1990",
-  choice_b: "b)1986",
-  choice_c: "c)1984",
-  answer: "b",
+  choice_a: "1990",
+  choice_b: "1986",
+  choice_c: "1984",
+  answer: "1986",
   artist_id: 7
 )
 
 drake4 = Question.create(
   content: "What is Drake's biggest album?",
-  choice_a: "a)Take Care",
-  choice_b: "b)Views",
-  choice_c: "c)More Life",
-  answer: "a",
+  choice_a: "Take Care",
+  choice_b: "Views",
+  choice_c: "More Life",
+  answer: "Take Care",
   artist_id: 7
 )
 
 drake5 = Question.create(
   content: "Where was Drake born?",
-  choice_a: "a)New York, NY",
-  choice_b: "b)Canada",
-  choice_c: "c)London",
-  answer: "b",
+  choice_a: "New York, NY",
+  choice_b: "Canada",
+  choice_c: "London",
+  answer: "Canada",
   artist_id: 7
 )
 
 # Rihanna questions
 rihq1 = Question.create(
   content: "What is Rihanna's birth year?",
-  choice_a: "a)1998",
-  choice_b: "b)1988",
-  choice_c: "c)1989",
-  answer: "b",
+  choice_a: "1998",
+  choice_b: "1988",
+  choice_c: "1989",
+  answer: "1988",
   artist_id: 3
 )
 
 rihq2 = Question.create(
   content: "What is Rihanna's top hit single?",
-  choice_a: "a)We Found Love",
-  choice_b: "b)Love the Way You Lie",
-  choice_c: "c)Stay",
-  answer: "a",
+  choice_a: "We Found Love",
+  choice_b: "Love the Way You Lie",
+  choice_c: "Stay",
+  answer: "We Found Love",
   artist_id: 3
 )
 
 rihq3 = Question.create(
   content: "Who is Rihanna's current partner?",
-  choice_a: "a)Drake",
-  choice_b: "b)Chris Brown",
-  choice_c: "c)None of the above",
-  answer: "c",
+  choice_a: "Drake",
+  choice_b: "Chris Brown",
+  choice_c: "None of the above",
+  answer: "None of the above",
   artist_id: 3
 )
 
 rihq4 = Question.create(
   content: "What is Rihanna's Biggest Album?",
-  choice_a: "a)Good Girl Gone Bad: Reloaded",
-  choice_b: "b)Unapologetic",
-  choice_c: "c)Anti",
-  answer: "b",
+  choice_a: "Good Girl Gone Bad: Reloaded",
+  choice_b: "Unapologetic",
+  choice_c: "Anti",
+  answer: "Unapologetic",
   artist_id: 3
 )
 
 rihq5 = Question.create(
   content: "Where was Rihanna born?",
-  choice_a: "a)Waikiki, HI",
-  choice_b: "b)New York, NY",
-  choice_c: "c)Saint Michael, Barbados",
-  answer: "c",
+  choice_a: "Waikiki, HI",
+  choice_b: "New York, NY",
+  choice_c: "Saint Michael, Barbados",
+  answer: "Saint Michael, Barbados",
   artist_id: 3
 )
 
@@ -397,46 +397,46 @@ rihq5 = Question.create(
 
 beyq1 = Question.create(
   content: "What is Beyoncé's birth year?",
-  choice_a: "a)1981",
-  choice_b: "b)1988",
-  choice_c: "c)1989",
-  answer: "a",
+  choice_a: "1981",
+  choice_b: "1988",
+  choice_c: "1989",
+  answer: "1981",
   artist_id: 5
 )
 
 beyq2 = Question.create(
   content: "What is Beyoncé's top hit single?",
-  choice_a: "a)Crazy In Love",
-  choice_b: "b)Love On Top",
-  choice_c: "c)Irreplaceable",
-  answer: "c",
+  choice_a: "Crazy In Love",
+  choice_b: "Love On Top",
+  choice_c: "Irreplaceable",
+  answer: "Irreplaceable",
   artist_id: 5
 )
 
 beyq3 = Question.create(
   content: "Who is Beyoncé's current partner?",
-  choice_a: "a)Kanye",
-  choice_b: "b)Chris Brown",
-  choice_c: "c)Jay-Z",
-  answer: "c",
+  choice_a: "Kanye",
+  choice_b: "Chris Brown",
+  choice_c: "Jay-Z",
+  answer: "Jay-Z",
   artist_id: 5
 )
 
 beyq4 = Question.create(
   content: "What is Beyoncé's Biggest Album?",
-  choice_a: "a)I Am... Sasha Fierce",
-  choice_b: "b)Lemonade",
-  choice_c: "c)Dangerously in Love",
-  answer: "b",
+  choice_a: "I Am... Sasha Fierce",
+  choice_b: "Lemonade",
+  choice_c: "Dangerously in Love",
+  answer: "Lemonade",
   artist_id: 5
 )
 
 beyq5 = Question.create(
   content: "Where was Beyoncé born?",
-  choice_a: "a)Waikiki, HI",
-  choice_b: "b)New York, NY",
-  choice_c: "c)Houston, TX",
-  answer: "c",
+  choice_a: "Waikiki, HI",
+  choice_b: "New York, NY",
+  choice_c: "Houston, TX",
+  answer: "Houston, TX",
   artist_id: 5
 )
 
@@ -444,46 +444,46 @@ beyq5 = Question.create(
 
 bruq1 = Question.create(
   content: "What is Bruno Mars's birth year?",
-  choice_a: "a)1981",
-  choice_b: "b)1988",
-  choice_c: "c)1985",
-  answer: "c",
+  choice_a: "1981",
+  choice_b: "1988",
+  choice_c: "1985",
+  answer: "1985",
   artist_id: 1
 )
 
 bruq2 = Question.create(
   content: "What is Bruno Mars's top hit single?",
-  choice_a: "a)24K Magic",
-  choice_b: "b)Uptown Funk!",
-  choice_c: "c)Nothin' On You",
-  answer: "b",
+  choice_a: "24K Magic",
+  choice_b: "Uptown Funk!",
+  choice_c: "Nothin' On You",
+  answer: "Uptown Funk!",
   artist_id: 1
 )
 
 bruq3 = Question.create(
   content: "Who is Bruno Mars's current partner?",
-  choice_a: "a)Jessica Caban",
-  choice_b: "b)Nicky Minaj",
-  choice_c: "c)Rihanna",
-  answer: "a",
+  choice_a: "Jessica Caban",
+  choice_b: "Nicky Minaj",
+  choice_c: "Rihanna",
+  answer: "Jessica Caban",
   artist_id: 1
 )
 
 bruq4 = Question.create(
   content: "What is Bruno Mars's Biggest Album?",
-  choice_a: "a)24K Magic",
-  choice_b: "b)Unorthodox Jukebox",
-  choice_c: "c)Earth to Mars",
-  answer: "b",
+  choice_a: "24K Magic",
+  choice_b: "Unorthodox Jukebox",
+  choice_c: "Earth to Mars",
+  answer: "Unorthodox Jukebox",
   artist_id: 1
 )
 
 bruq5 = Question.create(
   content: "Where is Bruno Mars's birth name?",
-  choice_a: "a)Bruno Hernandez",
-  choice_b: "b)Gene Mars",
-  choice_c: "c)Peter Hernandez",
-  answer: "c",
+  choice_a: "Bruno Hernandez",
+  choice_b: "Gene Mars",
+  choice_c: "Peter Hernandez",
+  answer: "Peter Hernandez",
   artist_id: 1
 )
 
@@ -491,46 +491,46 @@ bruq5 = Question.create(
 
 aliq1 = Question.create(
   content: "What was Alicia Keys born",
-  choice_a: "a)Houston, TX",
-  choice_b: "b)Baltimore, MD",
-  choice_c: "c)New York, NY",
-  answer: "c",
+  choice_a: "Houston, TX",
+  choice_b: "Baltimore, MD",
+  choice_c: "New York, NY",
+  answer: "New York, NY",
   artist_id: 8
 )
 
 aliq2 = Question.create(
   content: "What is Alicia Keys's top hit single?",
-  choice_a: "a)If I Ain't Got You",
-  choice_b: "b)No One",
-  choice_c: "c)Fallin'",
-  answer: "b",
+  choice_a: "If I Ain't Got You",
+  choice_b: "No One",
+  choice_c: "Fallin'",
+  answer: "No One",
   artist_id: 8
 )
 
 aliq3 = Question.create(
   content: "Who is Alicia Keys's partner?",
-  choice_a: "a)Swizz Beatz",
-  choice_b: "b)Drake",
-  choice_c: "c)Jay-Z",
-  answer: "a",
+  choice_a: "Swizz Beatz",
+  choice_b: "Drake",
+  choice_c: "Jay-Z",
+  answer: "Swizz Beatz",
   artist_id: 8
 )
 
 aliq4 = Question.create(
   content: "What is Alicia's Biggest Album?",
-  choice_a: "a)Songs in A Minor",
-  choice_b: "b)The Diary of Alicia Keys",
-  choice_c: "c)Girl on Fire",
-  answer: "b",
+  choice_a: "Songs in A Minor",
+  choice_b: "The Diary of Alicia Keys",
+  choice_c: "Girl on Fire",
+  answer: "The Diary of Alicia Keys",
   artist_id: 8
 )
 
 aliq5 = Question.create(
   content: "Where is Alicia Keys's birth name?",
-  choice_a: "a)Alison Keys",
-  choice_b: "b)Alicia Cook",
-  choice_c: "c)Aleyah Keys",
-  answer: "b",
+  choice_a: "Alison Keys",
+  choice_b: "Alicia Cook",
+  choice_c: "Aleyah Keys",
+  answer: "Alicia Cook",
   artist_id: 8
 )
 
@@ -538,46 +538,46 @@ aliq5 = Question.create(
 
 ushq1 = Question.create(
   content: "What was Usher born",
-  choice_a: "a)Houston, TX",
-  choice_b: "b)Baltimore, MD",
-  choice_c: "c)Dallas, TX",
-  answer: "c",
+  choice_a: "Houston, TX",
+  choice_b: "Baltimore, MD",
+  choice_c: "Dallas, TX",
+  answer: "Dallas, TX",
   artist_id: 9
 )
 
 ushq2 = Question.create(
   content: "What is Usher's top hit single?",
-  choice_a: "a)DJ Got Us Fallin' in Love",
-  choice_b: "b)Yeah!",
-  choice_c: "c)Burn",
-  answer: "b",
+  choice_a: "DJ Got Us Fallin' in Love",
+  choice_b: "Yeah!",
+  choice_c: "Burn",
+  answer: "Yeah!",
   artist_id: 9
 )
 
 ushq3 = Question.create(
   content: "Who is Usher's current partner?",
-  choice_a: "a)Grace Miguel",
-  choice_b: "b)Tameka Foster",
-  choice_c: "c)Nicki Minaj",
-  answer: "a",
+  choice_a: "Grace Miguel",
+  choice_b: "Tameka Foster",
+  choice_c: "Nicki Minaj",
+  answer: "Grace Miguel",
   artist_id: 9
 )
 
 ushq4 = Question.create(
   content: "What is Usher's Biggest Album?",
-  choice_a: "a)Looking 4 Myself",
-  choice_b: "b)Confessions",
-  choice_c: "c)My Way",
-  answer: "b",
+  choice_a: "Looking 4 Myself",
+  choice_b: "Confessions",
+  choice_c: "My Way",
+  answer: "Confessions",
   artist_id: 9
 )
 
 ushq5 = Question.create(
   content: "Where is Usher's birth name?",
-  choice_a: "a)Usher Roberts IV",
-  choice_b: "b)Usher Raymond IV",
-  choice_c: "c)Raymond Usher IV",
-  answer: "b",
+  choice_a: "Usher Roberts IV",
+  choice_b: "Usher Raymond IV",
+  choice_c: "Raymond Usher IV",
+  answer: "Usher Raymond IV",
   artist_id: 9
 )
 # g1 = Game.create()
